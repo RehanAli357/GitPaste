@@ -1,13 +1,1096 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* root */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "Kode Mono", monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* NAvigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1rem 0;
+    box-shadow: 0rem 0.5rem 1rem rgb(24, 255, 24);
 }
+
+nav .Logo {
+    cursor: pointer;
+    margin-left: 2rem;
+    border: 0.1rem solid rgb(24, 255, 24);
+    border-radius: 20rem;
+    padding: 1rem;
+}
+
+nav .Logo {
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4rem;
+    color: rgb(30, 255, 30);
+}
+
+nav .Nav-Btn button:hover {
+    transition: 0.3s;
+    background-color: rgb(24, 255, 24);
+    color: black;
+}
+
+nav .Nav-Mob {
+    display: none;
+}
+
+nav .Nav-Mob img {
+    cursor: pointer;
+}
+
+nav .Nav-Mob .Nav-Mob-Btn {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.829);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 7rem;
+    right: 0;
+    cursor: pointer;
+}
+
+nav .Nav-Mob .Nav-Mob-Btn button {
+    margin: 1em;
+}
+
+@media (max-width:654px) {
+    nav .Nav-Btn {
+        display: none;
+    }
+
+    nav .Nav-Mob {
+        display: flex;
+        margin-right: 2rem;
+    }
+
+}
+
+
+
+
+/*------------------------------------*/
+
+.Login-Card {
+    width: 100%;
+    position: absolute;
+    top: 7rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.Login-Card h1 {
+    margin-top: 1rem;
+    color: rgb(24, 255, 24);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.Login-Card form {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Login-Card form input {
+    margin: 0.5em 0;
+    background-color: black;
+    font-size: 2rem;
+    padding: 0.2em 1em;
+    border: 0.1rem solid rgb(24, 255, 24);
+    border-radius: 20rem;
+    color: rgb(24, 255, 24);
+    outline: none;
+}
+
+.Login-Card form button {
+    margin-top: 1rem;
+}
+
+@media (max-width:376px) {
+
+    .Login-Card h1 {
+        font-size: 1.5rem;
+    }
+
+    .Login-Card form input {
+        margin: 0.5em 0;
+        background-color: black;
+        font-size: 1.5rem;
+        padding: 0.2em 1em;
+        border: 0.1rem solid rgb(24, 255, 24);
+        border-radius: 20rem;
+        color: rgb(24, 255, 24);
+        outline: none;
+    }
+
+    .Login-Card form button {
+        font-size: 1.7rem;
+        margin-top: 1rem;
+    }
+}
+
+/*----------------------------------*/
+
+header {
+    width: 100%;
+    background-color: black;
+    padding-top: 12rem;
+    min-height: calc(100vh - 19.4vh)
+}
+
+.container {
+    font-size: 10rem;
+    color: rgb(24, 255, 24);
+    display: grid;
+    place-items: center;
+    width: fit-content;
+}
+
+.typed {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blinking {
+    0% {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(24, 255, 24)
+    }
+
+    100% {
+        border-color: transparent
+    }
+}
+
+header .Header-Data {
+    border: 2em solid rgb(24, 255, 24);
+    padding: 3rem 2rem;
+    display: flex;
+    width: 50rem;
+    margin: 3rem 2rem;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+header .Header-Data p {
+    color: rgb(24, 255, 24);
+    border: 0.1rem solid rgb(24, 255, 24);
+    border-radius: 50%;
+    padding: 2rem;
+    font-size: 4rem;
+    width: 10rem;
+    text-align: center;
+    box-shadow: 0rem 0rem 10px rgb(24, 255, 24) inset;
+
+}
+
+header .Header-Data b {
+    color: rgb(24, 255, 24);
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+header .Common-Btn {
+    /* margin: auto; */
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+@media (max-width:1080px) {
+    .container {
+        font-size: 9rem;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        font-size: 7.5rem;
+    }
+}
+
+@media (max-width:840px) {
+    .container {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:652px) {
+    .container {
+        font-size: 5rem;
+    }
+
+    header .Header-Data {
+        width: 45rem;
+    }
+
+    header .Header-Data p {
+        font-size: 3rem;
+        width: 8rem;
+    }
+
+    header .Header-Data b {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:540px) {
+    .container {
+        font-size: 4rem;
+        margin-top: -6rem;
+        margin-left: 3rem;
+    }
+
+    header .Common-Btn {
+        margin-left: 10rem;
+    }
+}
+
+@media (max-width:425px) {
+    .container {
+        font-size: 3.2rem;
+    }
+
+    header .Header-Data {
+        width: 36rem;
+        padding: 2rem;
+    }
+
+    header .Header-Data b {
+        font-size: 2rem;
+    }
+
+    header .Header-Data p {
+        font-size: 2.5rem;
+        width: 6.5rem;
+    }
+
+    header .Common-Btn {
+        margin: auto;
+        margin-left: 1.5rem;
+    }
+}
+
+@media (max-width:375px) {
+    header .Header-Data {
+        width: 33rem;
+    }
+}
+
+@media (max-width:320px) {
+    .container {
+        font-size: 2.5rem;
+        margin-top: -5rem;
+        margin-left: 1rem;
+    }
+
+    header .Header-Data {
+        width: 25rem;
+        padding: 1rem;
+    }
+
+    header .Header-Data b {
+        font-size: 1.7rem;
+    }
+
+}
+
+/*----------------------------------*/
+
+.User-Profile {
+    padding: 2rem 0;
+    width: 100%;
+    border: 0.1rem solid rgb(24, 255, 24);
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.User-Profile p {
+    font-size: 2rem;
+    color: rgb(24, 255, 24);
+    margin-left: 2rem;
+}
+
+.User-Profile p:nth-child(2) {
+    border: 0.1rem solid rgb(24, 255, 24);
+    width: fit-content;
+    margin-right: 2rem;
+    padding: 2rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/*----------------------------------*/
+
+.Projects {
+    width: 100%;
+    background-color: black;
+    min-height: calc(100vh - 19.4vh)
+}
+
+.Projects img {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.Projects button {
+    margin-top: 2rem;
+    float: right;
+}
+
+.Projects h1 {
+    color: rgb(24, 255, 24);
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 4rem;
+}
+
+.Projects .Project-Folder {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*---------------------------------*/
+
+.Folder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.3rem solid rgb(24, 255, 24);
+    border-radius: 1rem;
+    width: 50rem;
+    margin: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Folder .folder-Delete {
+    /* background-color: aliceblue; */
+    width: 100%;
+}
+
+.Folder .folder-Delete button {
+    margin: 2rem 1rem;
+}
+
+.Folder h2 {
+    color: rgb(24, 255, 24);
+    font-size: 4rem;
+}
+
+.Folder input {
+    margin: 0.5em 0;
+    background-color: black;
+    font-size: 2rem;
+    padding: 0.2em 1em;
+    border: 0.1rem solid rgb(24, 255, 24);
+    color: rgb(24, 255, 24);
+    outline: none;
+}
+
+.Folder img {
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+/*----------------------------------*/
+
+.Files {
+    background-color: black;
+    padding-top: 2rem;
+    min-height: calc(100vh - 19.4vh)
+}
+
+.Files .File-Path {
+    display: flex;
+    align-items: center;
+    padding: 0rem 0;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 0.5rem solid rgb(24, 255, 24);
+}
+
+.Files .File-Path span {
+    color: rgb(24, 255, 24);
+    font-size: 3rem;
+    margin-left: 1rem;
+    cursor: default;
+}
+
+.Files .File-Path img {
+    cursor: pointer;
+}
+
+.Files .File {
+    margin: 10% auto;
+    box-shadow: 0px 0px 2rem rgb(24, 255, 24) inset;
+    width: 70rem;
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.upload-File {
+    margin-top: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.upload-File p {
+    color: rgb(24, 255, 24);
+    font-size: 2rem;
+}
+
+.upload-File .Common-Btn {
+    width: 18rem;
+}
+
+.upload-File input {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 18rem;
+    height: 100%;
+    border-radius: 2rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.Files .File .File-Left {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-right: 0.1rem dashed rgb(24, 255, 24);
+}
+
+.Files .File .File-Left img {
+    margin-left: 2rem;
+}
+
+.Files .File .File-Left button {
+    margin-top: 2rem;
+}
+
+.Files .File .File-Right {
+    padding: 0.2rem 2rem;
+}
+
+.Files .File .File-Right .File-Url {
+    width: 40rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: 0.01rem;
+}
+
+.Files .File .File-Right .File-Url::-webkit-scrollbar {
+    width: 0.01rem;
+}
+
+.Files .File .File-Right .File-Url::-webkit-scrollbar-thumb {
+    background-color: rgb(24, 255, 24);
+    height: 1rem;
+}
+
+.Files .File .File-Right p {
+    color: rgb(24, 255, 24);
+    font-size: 2rem;
+    border: 0.01rem solid rgb(24, 255, 24);
+    padding: 1rem;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.Files .File .File-Right p:nth-child(2) {
+    overflow: hidden;
+    border: none;
+}
+
+.Files .File .File-Right button {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.Files .File .File-Right .Link-Form {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    color: rgb(24, 255, 24);
+}
+
+.Files .File .File-Right .Link-Form input {
+    width: 10rem;
+    background-color: black;
+    outline: none;
+    border: 0.1rem solid rgb(24, 255, 24);
+    color: rgb(24, 255, 24);
+    margin-left: 1rem;
+    padding: 0.2rem 1rem;
+}
+
+
+.Files .File .File-Right .updateFile {
+    position: relative;
+    width: 10rem;
+    margin-top: 1.7rem;
+}
+
+.Files .File .File-Right .updateFile input {
+    width: 100%;
+    /* display: none; */
+    opacity: 0;
+}
+
+.Files .File .File-Right .updateFile p {
+    overflow: hidden;
+    border: none;
+    position: absolute;
+    top: -0.8rem;
+    left: 0.2rem;
+}
+
+.Files .File .File-Right .updateFile:hover p {
+    color: black;
+}
+
+@media (max-width:730px) {
+    .Files .File-Path {
+        padding-left: 1rem;
+    }
+
+    .Files .File-Path span {
+        font-size: 3rem;
+    }
+
+    .Files .File-Path img {
+        width: 4rem;
+    }
+
+    .Files .File {
+        width: 50rem;
+        padding: 0;
+    }
+
+    .Files .File .File-Left {
+        padding: 0rem;
+    }
+
+    .Files .File .File-Left img {
+        width: 5rem;
+    }
+
+    .Files .File .File-Left button {
+        font-size: 1.5rem;
+    }
+
+    .Files .File .File-Right .File-Url {
+        width: 30rem;
+        margin-top: 3rem;
+    }
+
+    .Files .File .File-Right p {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    .Files .File .File-Right button {
+        font-size: 1.5rem;
+        margin: 0;
+        margin-left: 2rem;
+    }
+
+    .Files .File .File-Right .updateFile {
+        margin-top: 1rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        height: 2.5rem;
+        width: 8rem;
+        top: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .Files .File .File-Right .Link-Form label {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:524px) {
+    .Files .File-Path {
+        padding-left: 1rem;
+    }
+
+    .Files .File-Path span {
+        font-size: 2.5rem;
+    }
+
+    .Files .File-Path img {
+        width: 3rem;
+    }
+
+    .Files .File {
+        flex-direction: column;
+        width: 35rem;
+    }
+
+    .Files .File .File-Left {
+        width: 100%;
+        margin-top: 2rem;
+        border-right: none;
+        border-bottom: 0.01rem dashed rgb(24, 255, 24);
+        padding-bottom: 1rem;
+    }
+
+    .Files .File .File-Left img {
+        width: 10rem;
+        margin-top: 2rem;
+    }
+
+    .Files .File .File-Left button {
+        font-size: 2rem;
+    }
+
+    @media (max-width:362px) {
+
+        .Files .File-Path {
+            padding-left: 1rem;
+        }
+
+        .Files .File-Path span {
+            font-size: 2rem;
+        }
+
+        .Files .File-Path img {
+            width: 2rem;
+        }
+
+        .Files .File {
+            width: 30rem;
+        }
+
+        .Files .File .File-Left {
+            padding-bottom: 2rem;
+        }
+
+        .Files .File .File-Right .File-Url {
+            width: 20rem;
+            margin: 2rem auto;
+        }
+
+        .Files .File .File-Right .Link-Form {
+            flex-direction: column;
+        }
+
+        .Files .File .File-Right button {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .Files .File .File-Right .updateFile {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        .Files .File .File-Right .updateFile p {
+            left: 37%;
+        }
+
+        .Files .File .File-Right .Link-Form input {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+/*----------------------------------*/
+
+.Create-Folder {
+    background-color: black;
+    padding-top: 2rem;
+    min-height: calc(100vh - 19.4vh)
+}
+
+.Create-Folder img {
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.Create-Folder h1 {
+    color: rgb(24, 255, 24);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.Create-Folder .Folder-Form form {
+    border: 0.3rem solid rgb(24, 255, 24);
+    width: 80rem;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    /* height: 33rem; */
+}
+
+.Create-Folder .Folder-Form form input {
+    width: 30rem;
+    background-color: black;
+    outline: none;
+    border: 0.1rem solid rgb(24, 255, 24);
+    color: rgb(24, 255, 24);
+    margin-left: 1rem;
+    padding: 0.2rem 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.Create-Folder .Folder-Form form .Form-Upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 4rem 0;
+    width: 15rem;
+    height: 15rem;
+    cursor: pointer;
+}
+
+.Create-Folder .Folder-Form form .Form-Upload input {
+    border: none;
+    opacity: 0;
+    height: 15rem;
+    width: 22rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.Create-Folder .Folder-Form form img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.Create-Folder .Folder-Form form button {
+
+    margin-bottom: 2rem;
+}
+
+@media (max-width:822px) {
+    .Create-Folder .Folder-Form form {
+        width: 50rem;
+    }
+}
+
+@media (max-width:532px) {
+    .Create-Folder .Folder-Form form {
+        width: 35rem;
+    }
+}
+
+@media (max-width:320px) {
+    .Create-Folder .Folder-Form form {
+        width: 25rem;
+    }
+
+    .Create-Folder .Folder-Form form input {
+        width: 20rem;
+        font-size: 1.5rem;
+    }
+}
+
+/*----------------------------------*/
+.Profile {
+    padding-top: 5rem;
+    background-color: black;
+    min-height: calc(100vh - 19.4vh)
+}
+
+.Profie-Card {
+    width: 70rem;
+    border: .3rem solid rgb(24, 255, 24);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.Profie-Card .Card-Left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Profie-Card .Card-Left h1 {
+    font-size: 4rem;
+    color: rgb(24, 255, 24);
+    border: 0.2rem solid rgb(24, 255, 24);
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 100%;
+    margin: 2rem 0;
+}
+
+.Profie-Card .Card-Left p {
+    color: rgb(24, 255, 24);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.Profie-Card .Card-Left span {
+    filter: blur(4px);
+    font-size: 2rem;
+}
+
+/* .Profie-Card .Card-Left span:hover {
+    filter: blur(0px);
+} */
+
+.Profie-Card .Card-Left form input {
+    font-size: 1.5rem;
+    outline: none;
+    border: 0.2rem solid rgb(24, 255, 24);
+    padding: 0.1rem 1rem;
+    color: rgb(24, 255, 24);
+    background-color: black;
+}
+
+.Profie-Card .Card-Left form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Profie-Card .Card-Left form .Card-Password {
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+    flex-direction: column;
+
+}
+
+.Profie-Card .Card-Left form .Card-Password input {
+    margin: 0.4rem 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border: 0.2rem solid rgb(24, 255, 24);
+
+}
+
+
+.Profie-Card .Card-Left form .Card-Password img {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    width: 2rem;
+}
+
+.Profie-Card .Card-Left form button {
+    margin: 2rem 0;
+}
+
+.Profie-Card .Card-Left img:nth-child(5) {
+    margin-bottom: 1rem;
+}
+
+.Profie-Card .Card-Left img {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.Profie-Card .Card-Right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Profie-Card .Card-Right p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: rgb(24, 255, 24);
+}
+
+
+@media (max-width:702px) {
+    .Profie-Card {
+        width: 55rem;
+    }
+}
+
+@media (max-width:586px) {
+    .Profie-Card {
+        flex-direction: column;
+        width: 40rem;
+    }
+
+    .Profie-Card .Card-Left {
+        width: 100%;
+    }
+
+    .Profie-Card .Card-Right {
+        width: 100%;
+    }
+}
+
+@media (max-width:375px) {
+    .Profie-Card {
+        width: 30rem;
+    }
+}
+
+/*----------------------------------*/
+
+.Easy-Access {
+    width: 80%;
+    border: 0.2rem solid rgb(24, 255, 24);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    background-color: black;
+}
+
+.Easy-Access .Clock {
+    width: 30rem;
+    border: 0.2rem solid rgb(24, 255, 24);
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.Easy-Access .Clock p {
+    color: rgb(24, 255, 24);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Easy-Access p {
+    width: 100%;
+    color: rgb(24, 255, 24);
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.Easy-Access .Download-File {
+    padding: 1rem;
+    width: 50%;
+    margin: 2rem auto;
+    border: 0.3rem solid rgb(24, 255, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Easy-Access .Download-File img {
+    width: 14rem;
+    margin-bottom: 2rem;
+}
+
+/*----------------------------------*/
+
+.Alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 0.3rem solid rgb(24, 255, 24);
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    z-index: 999;
+    padding: 1rem;
+}
+
+.Alert .alertIcon {
+    flex: 0;
+}
+
+.Alert .alertIcon img {
+    width: 5rem;
+    margin-right: 2rem;
+}
+
+.Alert .alertMsg {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline
+}
+
+.Alert .alertMsg p {
+    font-size: 2rem;
+
+    color: white;
+}
+
+.Alert .alertMsg img {
+    width: 2rem;
+    border: 0.2rem solid rgb(24, 255, 24);
+    border-radius: 100%;
+    margin-left: 2rem;
+
+}
+
+/*----------------------------------*/
+
+.Common-Btn {
+    font-size: 2rem;
+    background-color: black;
+    border: 0.1rem solid rgb(24, 255, 24);
+    margin: 0 1em;
+    padding: 0.1em 1em;
+    cursor: pointer;
+    color: rgb(24, 255, 24);
+    border-radius: 20rem;
+    transition: 0.3s;
+
+}
+
+.Common-Btn:hover {
+    transition: 0.3s;
+    background-color: rgb(24, 255, 24);
+    color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap')
