@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GitPaste/static/css/main.665e7184.css",
+    "main.js": "/GitPaste/static/js/main.1964b4b9.js",
+    "index.html": "/GitPaste/index.html",
+    "main.665e7184.css.map": "/GitPaste/static/css/main.665e7184.css.map",
+    "main.1964b4b9.js.map": "/GitPaste/static/js/main.1964b4b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.665e7184.css",
+    "static/js/main.1964b4b9.js"
+  ]
+}
