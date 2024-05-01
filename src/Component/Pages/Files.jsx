@@ -159,7 +159,7 @@ const Files = () => {
 
                           }
                           <p className={data._id} ref={url} style={{display:show.length>0 && show===data._id ? 'block' :'none'}}>
-                            {`${window.location.origin}/easy-access/${user.name}/${params.id}/${data.fileKey}/${data._id}/${time}`}
+                            {`https://gitpastebackend.onrender.com/easyaccess?name=${user.name}&&folder=${params.id}&&token=${data.fileKey}&&id=${data._id}&&duration=${time}`}
                           </p>
                           <p>{data.fileName}</p>
                           <div
