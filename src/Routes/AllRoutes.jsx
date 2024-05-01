@@ -10,12 +10,13 @@ import PrivateRoute from './PrivateRoutes'
 const AllRoutes = () => {
     return (
         <Routes>
-            <Route exact path='/' element={<HomePage />} />
+            <Route exact path='/GitPaste' element={<HomePage />} />
             <Route path='/projects' element={<PrivateRoute><Projects /></PrivateRoute>} />
             <Route path='/folder/:id' element={<PrivateRoute><Files /></PrivateRoute>} />
             <Route path='/easy-access/:username/:folder/:key/:id/:time' element={<EasyAccess />} />
             <Route path='/create-folder' element={<PrivateRoute><CreateFolder /></PrivateRoute>} />
             <Route path='/profile' element={<PrivateRoute><Profile /></PrivateRoute>} />
+            <Route exact path='*' element={<HomePage />} />
         </Routes>
     )
 }
